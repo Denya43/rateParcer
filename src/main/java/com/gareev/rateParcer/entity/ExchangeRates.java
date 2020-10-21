@@ -11,7 +11,7 @@ public class ExchangeRates {
     private Long id;
 
     @Column
-    private String codeRate;
+    private String codeсurrency;
 
     @Column
     private String currency;
@@ -30,11 +30,11 @@ public class ExchangeRates {
     }
 
     public String getCodeRate() {
-        return codeRate;
+        return codeсurrency;
     }
 
     public void setCodeRate(String codeRate) {
-        this.codeRate = codeRate;
+        this.codeсurrency = codeRate;
     }
 
     public String getCurrency() {
@@ -58,7 +58,7 @@ public class ExchangeRates {
         return "Users{" +
                 "id=" + id +
                 ", currency='" + currency + '\'' +
-                ", codeRate='" + codeRate + '\'' +
+                ", codeCurrency='" + codeсurrency + '\'' +
                 ", rate=" + rate +
                 '}';
     }
