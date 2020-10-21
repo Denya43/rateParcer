@@ -32,9 +32,6 @@ public class RateParcerApplication {
 
 		currencyRateService.findAllByName("Dollar").forEach(it-> System.out.println(it));
 
-		currencyRateService.findWhereEmailIsGmail().forEach(it-> System.out.println(it));
-
-		currencyRateService.findWhereNameStartsFromSmith().forEach(it-> System.out.println(it));
 	}
 
 }

@@ -34,11 +34,5 @@ public class CurrencyRateService {
         return currencyRateRepository.findAllByName(name);
     }
 
-    public List<ExchangeRates> findWhereEmailIsGmail(){
-        return currencyRateRepository.findWhereEmailIsGmail();
-    }
 
-    public List<ExchangeRates> findWhereNameStartsFromSmith(){
-        return currencyRateRepository.findWhereNameStartsFromSmith();
-    }
 }

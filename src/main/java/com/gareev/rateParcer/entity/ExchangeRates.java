@@ -3,7 +3,7 @@ package com.gareev.rateParcer.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "address")
+@Table(name = "exchangerates")
 public class ExchangeRates {
 
     @Id
@@ -16,7 +16,7 @@ public class ExchangeRates {
     @Column
     private String currency;
 
-    @Column(name = "currencyRate")
+    @Column
     private double rate;
 
 //getters and setters
