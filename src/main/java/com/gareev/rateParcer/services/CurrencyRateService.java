@@ -30,9 +30,9 @@ public class CurrencyRateService {
         return currencyRateRepository.findById(userId).orElse(null);
     }
 
-  /*  public List<ExchangeRates> findAllByName(String currency){
+    public List<ExchangeRates> findAllByName(String currency){
         return currencyRateRepository.findAllByName(currency);
-    }*/
+    }
 
 
 }

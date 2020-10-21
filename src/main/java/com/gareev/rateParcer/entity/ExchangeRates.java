@@ -11,15 +11,13 @@ public class ExchangeRates {
     private Long id;
 
     @Column
-    private String codeсurrency;
+    private String currency_code;
 
     @Column
-    private String currency;
+    private String currency_name;
 
     @Column
-    private double rate;
-
-//getters and setters
+    private double rate_value;
 
     public Long getId() {
         return id;
@@ -29,37 +27,37 @@ public class ExchangeRates {
         this.id = id;
     }
 
-    public String getCodeRate() {
-        return codeсurrency;
+    public String getCurrency_code() {
+        return currency_code;
     }
 
-    public void setCodeRate(String codeRate) {
-        this.codeсurrency = codeRate;
+    public void setCurrency_code(String currency_code) {
+        this.currency_code = currency_code;
     }
 
-    public String getCurrency() {
-        return currency;
+    public String getCurrency_name() {
+        return currency_name;
     }
 
-    public void setCurrency(String currency) {
-        this.currency = currency;
+    public void setCurrency_name(String currency_name) {
+        this.currency_name = currency_name;
     }
 
-    public double getRate() {
-        return rate;
+    public double getRate_value() {
+        return rate_value;
     }
 
-    public void setRate(double rate) {
-        this.rate = rate;
+    public void setRate_value(double rate_value) {
+        this.rate_value = rate_value;
     }
 
     @Override
     public String toString() {
         return "Users{" +
                 "id=" + id +
-                ", currency='" + currency + '\'' +
-                ", codeCurrency='" + codeсurrency + '\'' +
-                ", rate=" + rate +
+                ", currency='" + currency_name + '\'' +
+                ", codeCurrency='" + currency_code + '\'' +
+                ", rate=" + rate_value +
                 '}';
     }
 }
