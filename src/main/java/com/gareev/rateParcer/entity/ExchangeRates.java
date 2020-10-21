@@ -52,4 +52,14 @@ public class ExchangeRates {
     public void setRate(double rate) {
         this.rate = rate;
     }
+
+    @Override
+    public String toString() {
+        return "Users{" +
+                "id=" + id +
+                ", currency='" + currency + '\'' +
+                ", codeRate='" + codeRate + '\'' +
+                ", rate=" + rate +
+                '}';
+    }
 }

@@ -9,9 +9,9 @@ import java.util.List;
 public interface CurrencyRateRepository extends JpaRepository<ExchangeRates, Long> {
 
 
-    List<ExchangeRates> findAllByName(String currency);//просто правильное название метода даст возможность
+  /*  List<ExchangeRates> findAllByName(String currency);//просто правильное название метода даст возможность
     //избежать запросов на SQL
-
+*/
 /*    @Query("select u from Users u where u.email like '%@gmail.com%'")//если этого мало можно написать
         //собственный запрос на языке похожем на SQL
     List<ExchangeRates> findWhereEmailIsGmail();

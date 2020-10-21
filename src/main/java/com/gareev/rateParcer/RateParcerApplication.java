@@ -30,8 +30,8 @@ public class RateParcerApplication {
 
 		currencyRateService.findAll().forEach(it-> System.out.println(it));
 
-		currencyRateService.findAllByName("Dollar").forEach(it-> System.out.println(it));
-
+	/*	currencyRateService.findAllByName("Dollar").forEach(it-> System.out.println(it));
+*/
 	}
 
 }
