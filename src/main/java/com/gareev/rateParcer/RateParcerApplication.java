@@ -22,14 +22,14 @@ public class RateParcerApplication {
 	@EventListener(ApplicationReadyEvent.class)
 	private void testJpaMethods(){
 		ExchangeRates exchangeRates = new ExchangeRates();
-		exchangeRates.setCurrency_name("Euro");
-		exchangeRates.setCurrency_code("EUR");
-		exchangeRates.setRate_value(77);
+		exchangeRates.setCurrencyName("Euro");
+		exchangeRates.setCurrencyCode("EUR");
+		exchangeRates.setRateValue(77);
 
 		currencyRateService.createCurrencyRate(exchangeRates);
 
 		currencyRateService.findAll().forEach(it-> System.out.println(it));
-		currencyRateService.findAllByName("Dollar").forEach(it-> System.out.println(it));
+		currencyRateService.findAllByCurrencyName("Dollar").forEach(it-> System.out.println(it));
 
 	}
 

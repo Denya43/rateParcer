@@ -10,14 +10,14 @@ public class ExchangeRates {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
-    private String currency_code;
+    @Column(name = "currency_code")
+    private String currencyCode;
 
-    @Column
-    private String currency_name;
+    @Column(name = "currency_name")
+    private String currencyName;
 
-    @Column
-    private double rate_value;
+    @Column(name = "rate_value")
+    private double rateValue;
 
     public Long getId() {
         return id;
@@ -27,37 +27,37 @@ public class ExchangeRates {
         this.id = id;
     }
 
-    public String getCurrency_code() {
-        return currency_code;
+    public String getCurrencyCode() {
+        return currencyCode;
     }
 
-    public void setCurrency_code(String currency_code) {
-        this.currency_code = currency_code;
+    public void setCurrencyCode(String currencyCode) {
+        this.currencyCode = currencyCode;
     }
 
-    public String getCurrency_name() {
-        return currency_name;
+    public String getCurrencyName() {
+        return currencyName;
     }
 
-    public void setCurrency_name(String currency_name) {
-        this.currency_name = currency_name;
+    public void setCurrencyName(String currencyName) {
+        this.currencyName = currencyName;
     }
 
-    public double getRate_value() {
-        return rate_value;
+    public double getRateValue() {
+        return rateValue;
     }
 
-    public void setRate_value(double rate_value) {
-        this.rate_value = rate_value;
+    public void setRateValue(double rateValue) {
+        this.rateValue = rateValue;
     }
 
     @Override
     public String toString() {
         return "Users{" +
                 "id=" + id +
-                ", currency='" + currency_name + '\'' +
-                ", codeCurrency='" + currency_code + '\'' +
-                ", rate=" + rate_value +
+                ", currency='" + currencyName + '\'' +
+                ", codeCurrency='" + currencyCode + '\'' +
+                ", rate=" + rateValue +
                 '}';
     }
 }
