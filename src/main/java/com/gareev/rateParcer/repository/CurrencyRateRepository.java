@@ -11,7 +11,9 @@ import java.util.List;
 public interface CurrencyRateRepository extends JpaRepository<ExchangeRates, Long> {
 
 
-    List<ExchangeRates> findAllByCurrencyName(String name);//просто правильное название метода даст возможность
+    List<ExchangeRates> findAllByCurrencyName(String name);
+    List<ExchangeRates> findAllByCurrencyCode(String name);
+    //просто правильное название метода даст возможность
     //избежать запросов на SQL
 /*    @Query("select u from Users u where u.email like '%@gmail.com%'")//если этого мало можно написать
         //собственный запрос на языке похожем на SQL

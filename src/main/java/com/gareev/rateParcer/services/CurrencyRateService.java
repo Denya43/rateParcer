@@ -11,27 +11,27 @@ import java.util.List;
 public class CurrencyRateService {
 
     @Autowired
-    private final CurrencyRateRepository currencyRateRepository;
+    private final CurrencyRateRepository currencyExchangeRates;
 
-    public CurrencyRateService(CurrencyRateRepository currencyRateRepository){
-        this.currencyRateRepository = currencyRateRepository;
+    public CurrencyRateService(CurrencyRateRepository currencyExchangeRates){
+        this.currencyExchangeRates = currencyExchangeRates;
     }
 
     public void createCurrencyRate(ExchangeRates exchangeRates){
-        currencyRateRepository.save(exchangeRates);
+        currencyExchangeRates.save(exchangeRates);
     }
 
 
     public List<ExchangeRates> findAll(){
-        return currencyRateRepository.findAll();
+        return currencyExchangeRates.findAll();
     }
 
     public ExchangeRates findById(Long userId){
-        return currencyRateRepository.findById(userId).orElse(null);
+        return currencyExchangeRates.findById(userId).orElse(null);
     }
 
     public List<ExchangeRates> findAllByCurrencyName(String currency){
-        return currencyRateRepository.findAllByCurrencyName(currency);
+        return currencyExchangeRates.findAllByCurrencyName(currency);
     }
 
 

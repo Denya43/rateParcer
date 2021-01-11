@@ -1,6 +1,8 @@
 package com.gareev.rateParcer.entity;
 
 import javax.persistence.*;
+import java.sql.Date;
+import java.util.Calendar;
 
 @Entity
 @Table(name = "exchangerates")
@@ -18,6 +20,21 @@ public class ExchangeRates {
 
     @Column(name = "rate_value")
     private double rateValue;
+
+    @Column(name = "update_date")
+    private Date updateDate;
+
+    public ExchangeRates(){
+
+    }
+
+    public ExchangeRates(String currencyCode, String currencyName, double rateValue) {
+        this.id = id;
+        this.currencyCode = currencyCode;
+        this.currencyName = currencyName;
+        this.rateValue = rateValue;
+        this.updateDate = new Date(Calendar.getInstance().getTime().getTime());
+    }
 
     public Long getId() {
         return id;
@@ -53,7 +70,7 @@ public class ExchangeRates {
 
     @Override
     public String toString() {
-        return "Users{" +
+        return "ExchangeRates{" +
                 "id=" + id +
                 ", currency='" + currencyName + '\'' +
                 ", codeCurrency='" + currencyCode + '\'' +

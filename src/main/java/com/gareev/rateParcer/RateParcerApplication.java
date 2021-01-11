@@ -1,5 +1,6 @@
 package com.gareev.rateParcer;
 
+import com.gareev.rateParcer.controller.ExchangeRatesController;
 import com.gareev.rateParcer.entity.ExchangeRates;
 import com.gareev.rateParcer.services.CurrencyRateService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,9 @@ public class RateParcerApplication {
 
 	@Autowired
 	private CurrencyRateService currencyRateService;
+
+	//@Autowired
+	//private ExchangeRatesController exchangeRatesController;
 
 	public static void main(String[] args) {
 		SpringApplication.run(RateParcerApplication.class, args);
@@ -28,9 +32,8 @@ public class RateParcerApplication {
 
 		currencyRateService.createCurrencyRate(exchangeRates);
 
-		currencyRateService.findAll().forEach(it-> System.out.println(it));
-		currencyRateService.findAllByCurrencyName("Dollar").forEach(it-> System.out.println(it));
-
+		//currencyRateService.findAll().forEach(it-> System.out.println(it));
+		currencyRateService.findAllByCurrencyName("Euro").forEach(it-> System.out.println(it));
 	}
 
 }
