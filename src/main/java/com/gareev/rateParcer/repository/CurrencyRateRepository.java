@@ -1,18 +1,17 @@
 package com.gareev.rateParcer.repository;
 
-import com.gareev.rateParcer.entity.ExchangeRates;
+import com.gareev.rateParcer.entity.Valute;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface CurrencyRateRepository extends JpaRepository<ExchangeRates, Long> {
+public interface CurrencyRateRepository extends JpaRepository<Valute, Long> {
 
 
-    List<ExchangeRates> findAllByCurrencyName(String name);
-    List<ExchangeRates> findAllByCurrencyCode(String name);
+    List<Valute> findAllByName(String name);
+    //List<Valute> findAllByCurrencyCode(String name);
     //просто правильное название метода даст возможность
     //избежать запросов на SQL
 /*    @Query("select u from Users u where u.email like '%@gmail.com%'")//если этого мало можно написать

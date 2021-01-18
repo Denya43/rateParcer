@@ -1,6 +1,6 @@
 package com.gareev.rateParcer.services;
 
-import com.gareev.rateParcer.entity.ExchangeRates;
+import com.gareev.rateParcer.entity.Valute;
 import com.gareev.rateParcer.repository.CurrencyRateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,21 +17,21 @@ public class CurrencyRateService {
         this.currencyExchangeRates = currencyExchangeRates;
     }
 
-    public void createCurrencyRate(ExchangeRates exchangeRates){
+    public void createCurrencyRate(Valute exchangeRates){
         currencyExchangeRates.save(exchangeRates);
     }
 
 
-    public List<ExchangeRates> findAll(){
+    public List<Valute> findAll(){
         return currencyExchangeRates.findAll();
     }
 
-    public ExchangeRates findById(Long userId){
+    public Valute findById(Long userId){
         return currencyExchangeRates.findById(userId).orElse(null);
     }
 
-    public List<ExchangeRates> findAllByCurrencyName(String currency){
-        return currencyExchangeRates.findAllByCurrencyName(currency);
+    public List<Valute> findAllByName(String currency){
+        return currencyExchangeRates.findAllByName(currency);
     }
 
 
