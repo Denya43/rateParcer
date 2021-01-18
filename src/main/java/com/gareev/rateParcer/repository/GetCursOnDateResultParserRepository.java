@@ -7,6 +7,7 @@ import ru.cbr.web.GetCursOnDateXMLResponse;
 @Repository
 public interface GetCursOnDateResultParserRepository {
 
+    Valute getValuteFromCB() throws Exception;
     Valute getValuteByValuteCh(String valuteCh, GetCursOnDateXMLResponse.GetCursOnDateXMLResult result) throws Exception;
     Valute getValuteByValuteCode(String valuteCode, GetCursOnDateXMLResponse.GetCursOnDateXMLResult result) throws Exception;
 
