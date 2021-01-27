@@ -21,7 +21,6 @@ public class CurrencyRateService {
         currencyExchangeRates.save(exchangeRates);
     }
 
-
     public List<Valute> findAll(){
         return currencyExchangeRates.findAll();
     }

@@ -3,7 +3,6 @@ package com.gareev.rateParcer.entity;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Date;
-import java.util.Calendar;
 
 @Entity
 @Table(name = "valute")
@@ -102,13 +101,13 @@ public class Valute {
     @Override
     public String toString() {
         return "ExchangeRates{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", chCode='" + chCode + '\'' +
-                ", code=" + code +  '\'' +
-                ", curs=" + curs +  '\'' +
-                ", nom=" + nom +  '\'' +
-                ", update_date=" + updateDate + '\'' +
+                "id=" + id + '\n' +
+                ", name=" + name + '\n' +
+                ", chCode=" + chCode + '\n' +
+                ", code=" + code +  '\n' +
+                ", curs=" + curs +  '\n' +
+                ", nom=" + nom +  '\n' +
+                ", update_date=" + updateDate + '\n' +
                 '}';
     }
 }
