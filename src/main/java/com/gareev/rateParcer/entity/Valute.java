@@ -15,8 +15,8 @@ public class Valute {
     @Column(name = "vname")
     private String name;
 
-    @Column(name = "chCode")
-    private String chCode;
+    @Column(name = "chсode")
+    private String chcode;
 
     @Column(name = "code")
     private int code;
@@ -34,9 +34,9 @@ public class Valute {
 
     }
 
-    public Valute(String name){
+    public Valute(String name, String chсode, int code, BigDecimal curs, BigDecimal nom, Date updateDate){
         this.name = name;
-        this.chCode = chCode;
+        this.chcode = chсode;
         this.code = code;
         this.nom = nom;
         this.curs = curs;
@@ -59,11 +59,11 @@ public class Valute {
     }
 
     public String getChCode() {
-        return chCode;
+        return chcode;
     }
 
     public void setChCode(String chCode) {
-        this.chCode = chCode;
+        this.chcode = chCode;
     }
 
     public int getCode() {
@@ -103,7 +103,7 @@ public class Valute {
         return "ExchangeRates{" +
                 "id=" + id + '\n' +
                 ", name=" + name + '\n' +
-                ", chCode=" + chCode + '\n' +
+                ", chCode=" + chcode + '\n' +
                 ", code=" + code +  '\n' +
                 ", curs=" + curs +  '\n' +
                 ", nom=" + nom +  '\n' +
